@@ -1,0 +1,17 @@
+{
+    "private": true,
+    "workspaces": [
+      "./header",
+      "./footer",
+      "./home"
+    ],
+    "scripts": {
+      "start": "concurrently \"cd header; npm run dev\" \"cd footer; npm run dev\" \"cd home; npm run dev\"",
+      "build": "concurrently \"cd header; npm run build\" \"cd footer; npm run build\" \"cd home; npm run build\"",
+      "serve": "concurrently \"cd header; npm run start\" \"cd footer; npm run start\" \"cd home; npm run start\""
+    },
+    "dependencies": {
+      "concurrently": "^7.0.0"
+    }
+  }
+  
