@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Footer() {
   return (
     <p>
-        Test Footer from localhost:3001
+        Test Footer from {process.env.FOOTER_URL}
     </p>
   )
 }
