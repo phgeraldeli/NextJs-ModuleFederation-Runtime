@@ -12,6 +12,9 @@ const remotes = isServer => {
     }),
     home: createDelegatedModule(require.resolve('./remote-delegate.js'), {
       remote: `home@${process.env.HOME_URL}/_next/static/${location}/remoteEntry.js`
+    }),
+    price: createDelegatedModule(require.resolve('./remote-delegate.js'), {
+      remote: `price@${process.env.PRICE_URL}/_next/static/${location}/remoteEntry.js`
     })
   };
 };
